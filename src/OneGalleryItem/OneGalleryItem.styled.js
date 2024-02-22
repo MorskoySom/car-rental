@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
 export const GalleryItem = styled.li`
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-
   width: 274px;
   height: 426px;  
   border-radius: 14px;
@@ -23,6 +18,15 @@ padding-bottom: 8px;
 export const TitleContainerName = styled.div`
 display: flex;
 `
+export const ImageCon = styled.div`
+position: relative;
+`
+
+export const Favor = styled.svg`
+position: absolute;
+top: 10px;
+right: 10px;
+`
 
 export const TitleModel = styled.span`
   font-family: "Manrope", sans-serif;
@@ -39,18 +43,18 @@ font-size: 16px;
 line-height: 1.5;
 color: #121417; 
 `
+
+export const ImageCont = styled.div`
+position: 'relative'
+`
+
 export const Image = styled.img`
   width: 100%;
   height: 268px;
   border-radius: 14px;
   object-fit: cover;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    transform: scale(1.03);
-    cursor: zoom-in;
-  }
-`;
+`
 
 export const DescrContainer = styled.div`
 display: flex;
@@ -69,7 +73,6 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1.5;
 color: rgba(18, 20, 23, 0.5);
-
 
 flex-grow: 1;
 text-overflow: ellipsis;
