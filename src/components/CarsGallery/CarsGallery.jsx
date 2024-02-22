@@ -1,6 +1,6 @@
-import { OneGalleryItem } from 'OneGalleryItem/OneGalleryItem';
+import { OneGalleryItem } from 'components/OneGalleryItem/OneGalleryItem';
 import { GalleryView } from './CarsGallery.styled';
-import datacars from '../cars.json';
+import datacars from '../CarsGallery/cars.json';
 
 export const CarGallery = () => {    
     return (

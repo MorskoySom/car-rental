@@ -21,7 +21,6 @@ display: flex;
 export const ImageCon = styled.div`
 position: relative;
 `
-
 export const Favor = styled.svg`
 position: absolute;
 top: 10px;
