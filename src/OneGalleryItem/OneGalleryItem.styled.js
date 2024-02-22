@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const GalleryItem = styled.li`
-  
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+
   width: 274px;
   height: 426px;  
   border-radius: 14px;
@@ -73,4 +77,18 @@ text-overflow: ellipsis;
   flex-shrink: 0;
   overflow: hidden;
 }
+`
+
+export const LearnBtn = styled.button`
+border-radius: 12px;
+padding: 12px 95px;
+width: 274px;
+height: 44px;
+margin-top: 28px;
+background-color: #3470ff;
+font-family: "Manrope", sans-serif;
+font-weight: 600;
+font-size: 14px;
+line-height: 1.42857;
+color: #fff;
 `

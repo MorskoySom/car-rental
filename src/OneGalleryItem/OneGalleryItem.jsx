@@ -1,4 +1,4 @@
-import { DescrItem, DescrContainer, GalleryItem, Image, TitleMake, TitleModel, TitleContainer, TitleContainerName } from "./OneGalleryItem.styled"
+import { LearnBtn, DescrItem, DescrContainer, GalleryItem, Image, TitleMake, TitleModel, TitleContainer, TitleContainerName } from "./OneGalleryItem.styled"
 
 export const OneGalleryItem = ({ data }) => {
     const city = data.address.split(', ')[1];
@@ -34,7 +34,7 @@ export const OneGalleryItem = ({ data }) => {
                 <DescrItem>{ data.functionalities[0]}</DescrItem>
                 <DescrItem></DescrItem>
             </DescrContainer>
-            
+            <LearnBtn>Learn more</LearnBtn>            
         </GalleryItem>
     )
 }
