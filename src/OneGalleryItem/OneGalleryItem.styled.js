@@ -14,6 +14,7 @@ display: flex;
 justify-content: space-between;
 padding-top: 14px;
 padding-right: 10px;
+padding-bottom: 8px;
 `
 export const TitleContainerName = styled.div`
 display: flex;
@@ -46,3 +47,30 @@ export const Image = styled.img`
     cursor: zoom-in;
   }
 `;
+
+export const DescrContainer = styled.div`
+display: flex;
+flex-wrap: nowrap;
+text-align: start;
+width: 233px;
+height: 18px;
+gap: 12px;
+padding-bottom: 4px;
+overflow: hidden;
+`
+
+export const DescrItem = styled.div`
+font-family: "Manrope", sans-serif;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.5;
+color: rgba(18, 20, 23, 0.5);
+
+
+flex-grow: 1;
+text-overflow: ellipsis;
+&:last-child {
+  flex-shrink: 0;
+  overflow: hidden;
+}
+`
