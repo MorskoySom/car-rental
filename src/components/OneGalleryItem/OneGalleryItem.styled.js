@@ -93,4 +93,7 @@ font-weight: 600;
 font-size: 14px;
 line-height: 1.42857;
 color: #fff;
+&:hover {
+    background: #0b44cd;
+  }
 `

@@ -1,7 +1,12 @@
+import { Filter } from "components/Filter/Filter"
+
 export const FavCars = () => {
     return (
-        <div>
-            Favourites cars
-        </div>
+        <>
+            <Filter />
+            <div>
+                Favourites cars
+            </div>
+        </>
     )
 }
