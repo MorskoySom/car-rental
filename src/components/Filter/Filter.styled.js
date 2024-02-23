@@ -7,14 +7,11 @@ gap: 18px;
 margin-top: 50px;
 `
 
-export const FilterInputsCont = styled.div`
-
-`
-
 export const FilterElement = styled.div`
 display: flex;
 flex-direction: column;
 gap: 8px;
+margin-top: auto;
 `
 
 export const FilterTitle = styled.div`
@@ -27,6 +24,7 @@ color: #8a8a89;
 
 export const FilterSelectCar = styled.select`
 border-radius: 14px;
+border: none;
 padding: 14px 89px 14px 18px;
 width: 224px;
 height: 48px;
@@ -35,11 +33,42 @@ background: #f7f7fb;
 
 export const FilterSelectHour = styled.select`
 border-radius: 14px;
+border: none;
 padding: 14px 18px;
 width: 125px;
 height: 48px;
 background: #f7f7fb;
 `
+
+export const FilterInputsMileage = styled.div`
+display: flex;
+`
+
+export const FilterMileageItemFrom = styled.input`
+border-radius: 14px 0 0 14px;
+border: none;
+width: 160px;
+height: 48px;
+padding-left: 18px;
+background: #f7f7fb;
+border-right: 1px solid rgba(138, 138, 137, 0.2);
+  &:hover,
+  &:focus {
+    outline: none;}
+`
+
+export const FilterMileageItemTo = styled.input`
+border-radius: 0 14px 14px 0;
+border: none;
+width: 160px;
+height: 48px;
+padding-left: 18px;
+background: #f7f7fb;
+  &:hover,
+  &:focus {
+    outline: none;}
+`
+
 
 export const FilterBtnSubmit = styled.button`
 border-radius: 12px;

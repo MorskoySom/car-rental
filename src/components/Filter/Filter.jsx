@@ -1,4 +1,4 @@
-import { FilterSelectHour, FilterSelectCar, FilterCont, FilterElement, FilterBtnSubmit, FilterTitle } from './Filter.styled'
+import { FilterMileageItemTo, FilterMileageItemFrom, FilterSelectHour, FilterSelectCar, FilterInputsMileage, FilterCont, FilterElement, FilterBtnSubmit, FilterTitle } from './Filter.styled'
 import React, { useState } from 'react'
 import brands from './makes.json'
 import { nanoid } from 'nanoid'
@@ -59,19 +59,19 @@ export const Filter = () => {
                     </FilterSelectHour>
                 </FilterElement>
                 <FilterElement>
-                    <FilterTitle>Car mileage / km</FilterTitle>
+                        <FilterTitle>Car mileage / km</FilterTitle>
+                        <FilterInputsMileage>
                     <div>
-                        <label>
-                            From{' '}
-                            <input type="number" value={fromValue} onChange={handleFromChange} />
+                        <label>                            
+                            <FilterMileageItemFrom type="number" value={fromValue} onChange={handleFromChange} placeholder='From' />
                         </label>
                     </div>
                     <div>
-                        <label>
-                            To{' '}
-                            <input type="number" value={toValue} onChange={handleToChange} />
+                        <label>                           
+                            <FilterMileageItemTo type="number" value={toValue} onChange={handleToChange} placeholder='To'/>
                         </label>
                     </div>
+                        </FilterInputsMileage>
                 </FilterElement>
             </FilterCont>
             <FilterBtnSubmit>Search</FilterBtnSubmit>
