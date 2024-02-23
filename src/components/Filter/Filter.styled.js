@@ -25,6 +25,21 @@ line-height: 1.28571;
 color: #8a8a89;
 `
 
+export const FilterSelectCar = styled.select`
+border-radius: 14px;
+padding: 14px 89px 14px 18px;
+width: 224px;
+height: 48px;
+background: #f7f7fb;
+`
+
+export const FilterSelectHour = styled.select`
+border-radius: 14px;
+padding: 14px 18px;
+width: 125px;
+height: 48px;
+background: #f7f7fb;
+`
 
 export const FilterBtnSubmit = styled.button`
 border-radius: 12px;
