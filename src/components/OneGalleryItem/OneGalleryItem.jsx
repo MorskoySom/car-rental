@@ -21,7 +21,7 @@ Modal.setAppElement('#root')
 
 export const OneGalleryItem = ({ data }) => {
 
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false)    
 
     const handleOpenModal = () => {
         setIsModalOpen(true);

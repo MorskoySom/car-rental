@@ -29,6 +29,11 @@ padding: 14px 89px 14px 18px;
 width: 224px;
 height: 48px;
 background: #f7f7fb;
+  &:active,
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;}
 `
 
 export const FilterSelectHour = styled.select`
@@ -38,6 +43,11 @@ padding: 14px 18px;
 width: 125px;
 height: 48px;
 background: #f7f7fb;
+  &:active,
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;}
 `
 
 export const FilterInputsMileage = styled.div`

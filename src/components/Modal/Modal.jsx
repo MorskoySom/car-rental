@@ -31,8 +31,8 @@ export const ModalWindow = ({ data, closeModal }) => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
-                <path d="M18 6L6 18" stroke="#121417" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M6 6L18 18" stroke="#121417" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M18 6L6 18" stroke="#121417" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6 6L18 18" stroke="#121417" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </ModalSvgClose>
             <ImageModal src={data.img} alt={data.make} />             
             <TitleContainerModal>
