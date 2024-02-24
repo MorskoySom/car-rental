@@ -18,6 +18,7 @@ padding-bottom: 8px;
 export const TitleContainerName = styled.div`
 display: flex;
 `
+
 export const ImageCon = styled.div`
 position: relative;
 `
@@ -40,7 +41,7 @@ font-family: "Manrope", sans-serif;
 font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
-color: #121417; 
+color: #121417;
 `
 
 export const ImageCont = styled.div`

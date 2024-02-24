@@ -1,6 +1,36 @@
+import React, { useState } from 'react'
+import Modal from 'react-modal'
+import {ModalWindow} from '../Modal/Modal'
 import { Favor, ImageCon, LearnBtn, DescrItem, DescrContainer, GalleryItem, Image, TitleMake, TitleModel, TitleContainer, TitleContainerName } from "./OneGalleryItem.styled"
 
+const customStyles = {
+    content: {
+        width: 541,
+        height: 742,
+        borderRadius: 24,        
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',        
+    },
+}
+
+Modal.setAppElement('#root')
+
 export const OneGalleryItem = ({ data }) => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
+    }
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+    };
+
     const city = data.address.split(', ')[1];
     const country = data.address.split(', ')[2];
     
@@ -43,7 +73,14 @@ export const OneGalleryItem = ({ data }) => {
                 <DescrItem>{ data.functionalities[0]}</DescrItem>
                 <DescrItem></DescrItem>
             </DescrContainer>
-            <LearnBtn>Learn more</LearnBtn>            
+            <LearnBtn onClick={handleOpenModal}>Learn more</LearnBtn>
+            <Modal                
+                isOpen={isModalOpen}
+                onRequestClose={handleCloseModal}
+                style={customStyles}
+                >
+                <ModalWindow data={data} closeModal={handleCloseModal} />
+            </Modal>            
         </GalleryItem>
     )
 }
