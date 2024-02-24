@@ -6,22 +6,27 @@ import datacars from '../components/CarsGallery/cars.json'
 
 export const FavCars = () => {
     const [favoriteCars, setFavoriteCars] = useState([])
+
     
-    useEffect(() => {
+    const updateFavoriteCars = () => {
         const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || []
-        setFavoriteCars(storedFavorites);
+        setFavoriteCars(storedFavorites)
+    }
+
+    useEffect(() => {        
+        updateFavoriteCars()
     }, [favoriteCars])
 
     return (
         <>
-            <Filter />            
-            <GalleryView>                   
-                    {datacars
-                        .filter(car => favoriteCars.includes(car.id))
-                        .map((car) => (
-                            <OneGalleryItem data={car} key={car.id} />
-                        ))}
-            </GalleryView>            
+            <Filter />
+            <GalleryView>
+                {datacars
+                    .filter(car => favoriteCars.includes(car.id))
+                    .map((car) => (
+                        <OneGalleryItem data={car} key={car.id} />
+                    ))}
+            </GalleryView>
         </>
-    );
-};
+    )
+}
