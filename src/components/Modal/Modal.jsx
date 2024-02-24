@@ -8,6 +8,7 @@ export const ModalWindow = ({ data, closeModal }) => {
 
     const rentalConditions = data.rentalConditions
     const conditionsArray = rentalConditions.split('\n')
+    const lastCondition = conditionsArray[conditionsArray.length - 1]
     let minimumAge    
     conditionsArray.forEach(condition => {        
         if (condition.includes("Minimum age:")) {          
@@ -80,7 +81,7 @@ export const ModalWindow = ({ data, closeModal }) => {
                     <ItemBlock>Valid driver`s license</ItemBlock>
                 </DriverBlock>
                 <DriverBlock>
-                    <CarRentalCond>rentalConditions.last</CarRentalCond>
+                    <CarRentalCond>{ lastCondition }</CarRentalCond>
                     <CarMileage>Mileage: <ItemBlockData>{data.mileage}</ItemBlockData></CarMileage>
                     <ItemBlock>Price: <ItemBlockData>{ data.rentalPrice }</ItemBlockData></ItemBlock>
                 </DriverBlock>
