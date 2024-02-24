@@ -164,3 +164,7 @@ height: 44px;
 background: #3470ff;
 color: #fff;
 `
+
+export const CallToRent = styled.a`
+text-decoration: none;
+`

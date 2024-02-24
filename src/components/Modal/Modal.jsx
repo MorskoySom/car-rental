@@ -1,5 +1,5 @@
 import React from 'react'
-import { ModalSvgClose, TotalModal, CarMileage, CarRentalCond, ItemBlockData, ItemBlock, DriverBlock, RentalCondBox, DescrContainerModalTwo, NextDescrModal, DescrModal, DescrContainerModal, TitleContainerNameModal, TitleModelModal, TitleMakeModal, TitleContainerModal, ImageModal, RentalCarBtn } from './Modal.styled'
+import { CallToRent, ModalSvgClose, TotalModal, CarMileage, CarRentalCond, ItemBlockData, ItemBlock, DriverBlock, RentalCondBox, DescrContainerModalTwo, NextDescrModal, DescrModal, DescrContainerModal, TitleContainerNameModal, TitleModelModal, TitleMakeModal, TitleContainerModal, ImageModal, RentalCarBtn } from './Modal.styled'
 import { DescrItem } from 'components/OneGalleryItem/OneGalleryItem.styled'
 
 
@@ -86,7 +86,9 @@ export const ModalWindow = ({ data, closeModal }) => {
                     <CarMileage>Mileage: <ItemBlockData>{formattedMileage}</ItemBlockData></CarMileage>
                     <ItemBlock>Price: <ItemBlockData>{ data.rentalPrice }</ItemBlockData></ItemBlock>
                 </DriverBlock>
-                <RentalCarBtn>Rental car</RentalCarBtn>
+                <CallToRent href="tel:+380730000000">
+                    <RentalCarBtn>Rental car</RentalCarBtn>
+                </CallToRent>
             </RentalCondBox>        
         </TotalModal>
     )
