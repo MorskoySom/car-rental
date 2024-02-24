@@ -1,21 +1,33 @@
-import { Filter } from "components/Filter/Filter"
-import React, { useState, useEffect } from 'react'
-import { GalleryView } from '../components/CarsGallery/CarsGallery.styled'
-import { OneGalleryItem } from '../components/OneGalleryItem/OneGalleryItem'
-import datacars from '../components/CarsGallery/cars.json'
+import { Filter } from "components/Filter/Filter";
+import React, { useState, useEffect } from 'react';
+import { GalleryView } from '../components/CarsGallery/CarsGallery.styled';
+import { OneGalleryItem } from '../components/OneGalleryItem/OneGalleryItem';
+import { fetchData } from '../components/api'; 
 
 export const FavCars = () => {
-    const [favoriteCars, setFavoriteCars] = useState([])
+    const [favoriteCars, setFavoriteCars] = useState([]);
+    const [datacars, setDataCars] = useState([]);
 
-    
     const updateFavoriteCars = () => {
-        const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || []
-        setFavoriteCars(storedFavorites)
-    }
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || [];
+        setFavoriteCars(storedFavorites);
+    };
 
     useEffect(() => {        
-        updateFavoriteCars()
-    }, [favoriteCars])
+        updateFavoriteCars();
+
+        // Завантаження даних через API
+        const fetchDataFromAPI = async () => {
+            try {
+                const data = await fetchData(); // Виклик функції для отримання даних
+                setDataCars(data); // Оновлення стану з отриманими даними
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchDataFromAPI();
+    }, []);
 
     return (
         <>
@@ -28,5 +40,5 @@ export const FavCars = () => {
                     ))}
             </GalleryView>
         </>
-    )
-}
+    );
+};

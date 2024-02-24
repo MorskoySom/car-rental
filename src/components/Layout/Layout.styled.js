@@ -9,8 +9,12 @@ export const Container = styled.div`
 export const Hat = styled.header`
 display: flex;
 justify-content: center;
+position: fixed;
+top: 0;
+width: 100%;
 gap: 150px;
 height: 60px;
+z-index: 100;
 background: linear-gradient(to bottom, #ffffff, #3470ff);
 box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
