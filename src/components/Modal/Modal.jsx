@@ -6,12 +6,15 @@ import { DescrItem } from 'components/OneGalleryItem/OneGalleryItem.styled'
 
 export const ModalWindow = ({ data, closeModal }) => {
 
+    const rentalConditions = data.rentalConditions
+    const conditionsArray = rentalConditions.split('\n')
+    let minimumAge    
+    conditionsArray.forEach(condition => {        
+        if (condition.includes("Minimum age:")) {          
+          minimumAge = parseInt(condition.replace("Minimum age: ", ""));
+        }
+    });
     
-
-
-
-
-
 
     const city = data.address.split(', ')[1];
     const country = data.address.split(', ')[2];
@@ -73,7 +76,7 @@ export const ModalWindow = ({ data, closeModal }) => {
             </NextDescrModal>
             <RentalCondBox>
                 <DriverBlock>
-                    <ItemBlock>Minimum age: <ItemBlockData>25</ItemBlockData></ItemBlock>
+                    <ItemBlock>Minimum age: <ItemBlockData>{ minimumAge }</ItemBlockData></ItemBlock>
                     <ItemBlock>Valid driver`s license</ItemBlock>
                 </DriverBlock>
                 <DriverBlock>
