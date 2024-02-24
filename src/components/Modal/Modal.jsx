@@ -16,6 +16,7 @@ export const ModalWindow = ({ data, closeModal }) => {
         }
     });
     
+    const formattedMileage = data.mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 
     const city = data.address.split(', ')[1];
     const country = data.address.split(', ')[2];
@@ -82,7 +83,7 @@ export const ModalWindow = ({ data, closeModal }) => {
                 </DriverBlock>
                 <DriverBlock>
                     <CarRentalCond>{ lastCondition }</CarRentalCond>
-                    <CarMileage>Mileage: <ItemBlockData>{data.mileage}</ItemBlockData></CarMileage>
+                    <CarMileage>Mileage: <ItemBlockData>{formattedMileage}</ItemBlockData></CarMileage>
                     <ItemBlock>Price: <ItemBlockData>{ data.rentalPrice }</ItemBlockData></ItemBlock>
                 </DriverBlock>
                 <RentalCarBtn>Rental car</RentalCarBtn>
