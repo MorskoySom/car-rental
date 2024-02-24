@@ -1,0 +1,25 @@
+
+  useEffect(() => {
+    if (query && page) {
+      async function getImages() {
+        try {
+          setLoading(true);
+          setError(false);
+          const pictures = await fetchImages(query, page);
+          setGalleryItems(prevGalleryItems => [...prevGalleryItems, ...pictures.hits]);
+          if (page < Math.ceil(pictures.totalHits / 12)) {
+            setLoadMore(true);
+          }
+          if (page >= Math.ceil(pictures.totalHits / 12)) {
+            setLoadMore(false);
+          }
+        } catch (error) {
+          setError(true);
+        } finally {
+          setLoading(false);
+        }
+      }
+
+      getImages()
+    }
+  }, [query, page]);

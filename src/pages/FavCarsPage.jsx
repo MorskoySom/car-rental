@@ -2,7 +2,7 @@ import { Filter } from "components/Filter/Filter";
 import React, { useState, useEffect } from 'react';
 import { GalleryView } from '../components/CarsGallery/CarsGallery.styled';
 import { OneGalleryItem } from '../components/OneGalleryItem/OneGalleryItem';
-import { fetchData } from '../components/api'; 
+import { fetchDataFavorite } from '../components/api'; 
 
 export const FavCars = () => {
     const [favoriteCars, setFavoriteCars] = useState([]);
@@ -15,18 +15,17 @@ export const FavCars = () => {
 
     useEffect(() => {        
         updateFavoriteCars();
-
-        // Завантаження даних через API
+        
         const fetchDataFromAPI = async () => {
             try {
-                const data = await fetchData(); // Виклик функції для отримання даних
-                setDataCars(data); // Оновлення стану з отриманими даними
+                const data = await fetchDataFavorite(); 
+                setDataCars(data); 
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
 
-        fetchDataFromAPI();
+        fetchDataFromAPI()
     }, []);
 
     return (

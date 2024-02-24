@@ -15,3 +15,4 @@ export const fetchData = async (page) => {
         return [];
     }
 };
+
