@@ -1,6 +1,6 @@
-<h1 align="center" style="color: darkgreen">Dashboard Organaizer</h1>
+<h1 align="center" style="color: darkgreen">Car Rental Organaizer</h1>
 
-<h4 align="center" style="color: darkgreen">be as efficient as possible in your actions
+<h4 align="center" style="color: darkgreen">be move like you want
 </h4>
 
 <h2 align="center">
