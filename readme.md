@@ -17,11 +17,13 @@
 
 <img src="https://img.shields.io/npm/v/react?color=orange">
 
-<img src="https://img.shields.io/badge/Vite-v2.7.13-green?logo=vite">
+<img src="https://img.shields.io/badge/react--redux-yellow?label=9.1.0">
 
-<img src="https://img.shields.io/badge/ESLint-v8.7.0-brown?logo=eslint">
+<img src="https://img.shields.io/badge/react--router--dom-gray?label=6.22.1&labelColor=red
+">
 
-<img src="https://img.shields.io/badge/Linear-v1.4.3-pink?logo=linear">
+<img src="https://img.shields.io/badge/styled--components-blue?label=6.1.8&labelColor=yellow
+">
 
 </p>
 
