@@ -2,7 +2,7 @@ import { Layout } from "components/Layout/Layout";
 import { CarGallery } from "./components/CarsGallery/CarsGallery";
 import { FavCars } from "./pages/FavCarsPage";
 import { Homepage } from "./pages/HomePage";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate  } from "react-router-dom";
 
 function App() {
   return (    
@@ -11,6 +11,7 @@ function App() {
         <Route index element={<Homepage />} />
         <Route path="/catalog" element={<CarGallery />} />
         <Route path="/favorites" element={<FavCars />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>    
   );
