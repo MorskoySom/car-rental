@@ -19,11 +19,9 @@
 
 <img src="https://img.shields.io/badge/react--redux-yellow?label=9.1.0">
 
-<img src="https://img.shields.io/badge/react--router--dom-gray?label=6.22.1&labelColor=red
-">
+<img src="https://img.shields.io/badge/react--router--dom-gray?label=6.22.1&labelColor=red">
 
-<img src="https://img.shields.io/badge/styled--components-blue?label=6.1.8&labelColor=yellow
-">
+<img src="https://img.shields.io/badge/styled--components-blue?label=6.1.8&labelColor=yellow">
 
 </p>
 
