@@ -11,11 +11,11 @@
 
 <p align="center">
   
-<img src="https://img.shields.io/badge/TypeScript-v4.5.2-red?logo=typescript">
+<img src="https://img.shields.io/npm/v/npm.svg?logo=npm">
 
-<img src="https://img.shields.io/badge/Redux-v4.1.1-yellow?logo=redux" >
+<img src="https://img.shields.io/badge/logo-gitlab-blue?logo=gitlab" >
 
-<img src="https://img.shields.io/badge/React-v17.0.2-blue?logo=react">
+<img src="https://img.shields.io/npm/v/react?color=orange">
 
 <img src="https://img.shields.io/badge/Vite-v2.7.13-green?logo=vite">
 
